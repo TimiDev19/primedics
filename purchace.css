@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 1rem black;
+}
+
+header .logo{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+header .navbar a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+}
+
+header .navbar a:hover{
+    text-shadow: 0 0 1rem black;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+h4{
+    font-size: 20px;
+    color: black;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+}
+
+.pro-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.product1{
+    padding: 10px;
+    text-align: center;
+}
+
+.featured-products{
+    text-align: center;
+}
+
+.featured-products .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+    margin: 15px 10px;
+    transition: 0.2s ease;
+}
+
+.featured-products .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.featured-products .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.featured-products .pro .description{
+    text-align: start;
+    padding: 10px 0;
+
+}
+
+.featured-products .pro .description span{
+    color: #1a4745;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.featured-products .pro .description h5{
+    padding-top: 7px;
+    color: black;
+    font-size: 14px;
+}
+
+.featured-products .pro .description h4{
+    color: rgb(23, 119, 23);
+}
+
+.featured-products .pro .cart{
+    width: fit-content;
+    padding: 5px;
+    background: rgb(23, 119, 23);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.featured-products .pro .cart:hover{
+    box-shadow: 0 0 1rem rgb(23, 119, 23);
+}

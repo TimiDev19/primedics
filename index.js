@@ -1,55 +1,50 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+var button = document.getElementById('theme');
+var logo = document.getElementById('logo');
+var header = document.querySelector('header');
+var nav = document.getElementById('nav');
+var nav1 = document.getElementById('nav1');
+var nav2 = document.getElementById('nav2');
+var home = document.getElementById('home');
+var body = document.querySelector('body');
+var welcome = document.getElementById('welcome');
+var primedics = document.getElementById('primedics');
+var hometxt = document.getElementById('hometxt');
+var abtbtn = document.getElementById('abtbtn');
+var abthead = document.getElementById('abthead');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
-
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id +']').classList.add('active');
-            });
-        };
-    });
-
-
-
-    let header = document.querySelector('header');
-
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');  
-};
-
-ScrollReveal({
-     reset: true,
-     distance: '80px',
-     duration: 2000,
-     delay: 200 
-    });
-
-    ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
-    ScrollReveal().reveal('.home-img, .stack-container, projects-box, .contact-form', { origin: 'bottom'});
-    ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
-    ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
-
-consttyped = new Typed('.multiple-text', {
-    strings: ['Frontend Developer.', 'Software Engineer.'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+button.onclick = function theme(){
+    if(document.querySelector('header').style.background == 'white'){
+        header.style.background = 'rgb(39, 36, 36)';
+        header.style.boxShadow = '0 0 1rem white';
+        logo.style.color = 'white';
+        nav.style.color = 'white';
+        nav1.style.color = 'white';
+        nav2.style.color = 'white';
+        home.style.background = 'rgb(39, 36, 36)';
+        welcome.style.color = 'white';
+        body.style.background = 'rgb(39, 36, 36)';
+        primedics.style.color = 'white';
+        hometxt.style.color = 'white';
+        abtbtn.style.background = 'white';
+        abtbtn.style.color = 'rgb(39, 36, 36)';
+        abtbtn.style.hover = 'box';
+        abthead.style.background = 'rgb(39, 36, 36)';
+    }
+    else{
+        header.style.background = 'white';
+        header.style.boxShadow = '0 0 1rem black';
+        logo.style.color = 'black';
+        nav.style.color = 'black';
+        nav1.style.color = 'black';
+        nav2.style.color = 'black';
+        home.style.background = 'white';
+        welcome.style.color = 'black';
+        body.style.background = 'white';
+        primedics.style.color = 'black';
+        hometxt.style.color = 'black';
+        abtbtn.style.background = 'black';
+        abtbtn.style.color = 'white';
+        abthead.style.background = 'white';
+    }
+    
+}
